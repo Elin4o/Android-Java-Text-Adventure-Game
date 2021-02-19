@@ -233,6 +233,13 @@ public class Story {
         nextposition4 = "";
         gs.button3.setVisibility(View.INVISIBLE);
         gs.button4.setVisibility(View.INVISIBLE);
+
+        if(holySword == true ){
+            gs.image.setImageResource(R.drawable.empty_chest);
+            gs.text.setText("You've killed it.There's nothing left to do here");
+            gs.button1.setText("Back");
+            nextposition1 = "room";
+        }
     }
     public void mimic(){
         gs.image.setImageResource(R.drawable.mimic);
@@ -255,7 +262,6 @@ public class Story {
         else if(antiMimicPotion == true){
             nextposition1 = "mimicIsDead";
 
-            gs.button2.setVisibility(View.INVISIBLE);
             gs.button3.setVisibility(View.INVISIBLE);
             gs.button4.setVisibility(View.INVISIBLE);
         }
