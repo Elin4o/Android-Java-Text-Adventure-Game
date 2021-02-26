@@ -6,6 +6,7 @@ import android.view.View;
 public class Story {
     GameScreen gs;
     String nextposition1,nextposition2,nextposition3,nextposition4;
+
     boolean club = false;
     boolean key = false;
     boolean holySword = false;
@@ -288,7 +289,10 @@ public class Story {
         gs.button3.setText("");
         gs.button4.setText("");
 
+        showAllButtons();
+
         if (key == false){
+
             nextposition1 = "noKey";
             nextposition2 = "room";
             nextposition3 = "";
@@ -314,7 +318,7 @@ public class Story {
         gs.button3.setText("");
         gs.button4.setText("");
 
-        gs.button1.setText("room");
+        nextposition1 = "room";
         gs.button2.setVisibility(View.INVISIBLE);
         gs.button3.setVisibility(View.INVISIBLE);
         gs.button4.setVisibility(View.INVISIBLE);
